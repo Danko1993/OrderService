@@ -35,11 +35,11 @@ public class OrderProduct {
     double totalWeight;
 
 
-    public double setTotalPrice(Double unitPrice, Integer orderedQuantity){
-        return unitPrice * orderedQuantity;
+    public void setTotalPrice(Double unitPrice, Integer orderedQuantity){
+        this.totalPrice = unitPrice*orderedQuantity;
     }
-    public double setTotalWeight(Double unitWeight, Integer orderedQuantity){
-        return unitWeight * orderedQuantity;
+    public void setTotalWeight(Double unitWeight, Integer orderedQuantity){
+        this.totalWeight = unitWeight * orderedQuantity;
     }
 
 }

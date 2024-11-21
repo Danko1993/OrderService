@@ -31,4 +31,19 @@ public class Order {
     private Date estimatedDeliveryDate;
 
     private String customerName;
+
+    public void setOrderPrice(List<OrderProduct> products) {
+        double totalPrice = 0;
+        for (OrderProduct product : products) {
+            totalPrice+=product.getTotalPrice();
+        }
+        this.orderPrice = totalPrice;
+    }
+    public void setOrderWeight(List<OrderProduct> products) {
+        double totalWeight = 0;
+        for (OrderProduct product : products) {
+            totalWeight+=product.getTotalWeight();
+        }
+        this.orderWeight = totalWeight;
+    }
 }
